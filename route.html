@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../stylesheet/main.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<h1>Welcome to test page for routing</h1>
+    <button id="get">GET</button>
+    <button id="post">POST</button>
+    <button id="delete">Delete</button>
+    <button id="put">PUT</button>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script>
+      $("#get").click(function(){
+        $.ajax({
+          url: "/contact",
+          data: {tp: "get", test: {x:1}},
+          type: "GET"
+        }).done(function(response){
+          console.log(response);
+        }).fail(function(){
+          console.log("Fail");
+        });
+      });
+      $("#post").click(function(){
+        $.ajax({
+          url: "/contact",
+          data: JSON.stringify({tp: "post"}),
+          type: "POST",
+					contentType: "application/json"
+        }).done(function(response){
+          console.log(response);
+        }).fail(function(){
+          console.log("Fail");
+        });
+      });
+      $("#delete").click(function(){
+        $.ajax({
+          url: "/contact",
+          data: {tp: "delete"},
+          type: "DELETE"
+        }).done(function(response){
+          console.log(response);
+        }).fail(function(){
+          console.log("Fail");
+        });
+      });
+      $("#put").click(function(){
+        $.ajax({
+          url: "/contact",
+          data: {tp: "put"},
+          type: "PUT"
+        }).done(function(response){
+          console.log(response);
+        }).fail(function(){
+          console.log("Fail");
+        });
+      });
+    </script>
+	</body>
+</html>

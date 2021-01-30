@@ -1,0 +1,9 @@
+h1 { color: skyblue; }
+li:hover { color: red; }
+body { background-color: rgba(0,0,0,0.8); }
+label{ color: white;}
+h3 {
+  width: 100px;
+  color: yellow;
+}
+h3:hover{ color: red;}

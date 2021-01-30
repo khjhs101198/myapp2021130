@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/stylesheet/main.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1>Post data with ajax</h1>
+		<form id="ajax_form">
+			<label for="place">Where do you live?</label>
+			<input type="text" name="place" required>
+			<label for="job">Jobs for you?</label>
+			<input type="text" name="job" required>
+			<button>Submit</button>
+		</form>
+			<ul>
+				<% for(let i=0; i<data.length; i++) { %>
+					<li><%= data[i].place %> <%= data[i].job %></li>
+				<% } %>
+			</ul>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="/script/main.js"></script>
+	</body>
+</html>
