@@ -59,16 +59,6 @@ app.post("/contact", jsonParser, function(req, res){
   res.sendFile(__dirname+"/contact.html");
 })
 
-
-app.listen(3000, function(err) {
-  if(err) {
-    console.log(err);
-  }
-  else {
-    console.log("Work properly");
-  }
-});
-
 /*let obj = {age: 21, name: ["Jim", "Bob", "Alice"]};
 app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/public") );
